@@ -4,9 +4,9 @@
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="10"/>
-    <application android:label="@string/app_name">
+    <application android:label="TapLeClown">
         <activity android:name="TapLeClown"
-                  android:label="@string/app_name">
+                  android:label="TapLeClown">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -15,7 +15,7 @@
     </application>
     <activity
             android:name="org.apache.cordova.DroidGap"
-            android:label="@string/app_name"
+            android:label="TapLeClown"
             >
         <intent-filter></intent-filter>
     </activity>
