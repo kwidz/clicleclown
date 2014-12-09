@@ -29,21 +29,21 @@ var ClickClown = function(){
         clownNoir.x = 0;
         clownNoir.y = 0;
 
-        clownNoir.scaleX = clownNoir.scaleY = stage.width /2000;
+        clownNoir.scaleX = clownNoir.scaleY = stage.width /3/ 256;
         stage.addChild(clownNoir);
 
         var spriteclownNormal = new SpriteClown("normal");
         var clownNormal = spriteclownNormal.animation;
         clownNormal.x = 300;
         clownNormal.y = 0;
-        clownNormal.scaleX = clownNoir.scaleY = stage.width /2000;
+        clownNormal.scaleX = clownNormal.scaleY = stage.width /3/256;
         stage.addChild(clownNormal);
 
         var spriteclownMalade = new SpriteClown("Malade");
         var clownMalade = spriteclownMalade.animation;
         clownMalade.x = 600;
         clownMalade.y = 0;
-        clownMalade.scaleX = clownNoir.scaleY = stage.width /2000;
+        clownMalade.scaleX = clownMalade.scaleY = stage.width /3 / 256;
         stage.addChild(clownMalade);
 
         function enterFrameHandler(event) {

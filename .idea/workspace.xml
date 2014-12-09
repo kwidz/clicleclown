@@ -81,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/assets/www/jeu/ClickClown.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6639344" vertical-offset="270" max-vertical-offset="975">
-              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+              <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -596,12 +596,12 @@
       <workItem from="1418060469835" duration="685000" />
       <workItem from="1418061647751" duration="7906000" />
       <workItem from="1418162692718" duration="153000" />
-      <workItem from="1418162898235" duration="2510000" />
+      <workItem from="1418162898235" duration="2830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11254000" />
+    <option name="totallyTimeSpent" value="11574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1045" extended-state="0" />
@@ -659,7 +659,8 @@
     <MESSAGE value="Renomage de l'application" />
     <MESSAGE value="Ajout du sprite des clowns&#10;" />
     <MESSAGE value="Ajout du sprite des clowns fonctionels dans le code&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout du sprite des clowns fonctionels dans le code&#10;" />
+    <MESSAGE value="Redimentionnement des sprite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redimentionnement des sprite" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -847,7 +848,7 @@
     <entry file="file://$PROJECT_DIR$/assets/www/jeu/ClickClown.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6639344" vertical-offset="270" max-vertical-offset="975">
-          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
           <folding />
         </state>
       </provider>
