@@ -24,6 +24,17 @@ var ClickClown = function(){
         createjs.Ticker.setFPS(60);
         var vitessex = 3;
         var vitessey= 3;
+        var spriteclownNoir = new SpriteClown("noir");
+        var clownNoir = spriteclownNoir.animation;
+        stage.addChild(clownNoir);
+
+        var spriteclownNormal = new SpriteClown("normal");
+        var clownNormal = spriteclownNormal.animation;
+        stage.addChild(clownNormal);
+
+        var spriteclownMalade = new SpriteClown("Malade");
+        var clownMalade = spriteclownMalade.animation;
+        stage.addChild(clownMalade);
 
         function enterFrameHandler(event) {
             if(((circle.x +50) >= stage.width) || (circle.x - 50) <= 0)
