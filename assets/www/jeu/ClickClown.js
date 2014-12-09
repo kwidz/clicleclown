@@ -26,6 +26,8 @@ var ClickClown = function(){
         var vitessey= 3;
         var spriteclownNoir = new SpriteClown("noir");
         var clownNoir = spriteclownNoir.animation;
+        clownNoir.x = 100;
+        clownNoir.y = 100;
         stage.addChild(clownNoir);
 
         var spriteclownNormal = new SpriteClown("normal");

@@ -6,11 +6,11 @@ var SpriteClown = function(couleur){
     };
     var spriteSheet = new createjs.SpriteSheet(data);
     if(couleur == "noir")
-        this.animation = new createjs.Sprite(SpriteSheet, "noir");
+        this.animation = new createjs.Sprite(spriteSheet, "noir");
     else if (couleur == "normal")
-        this.animation = new createjs.Sprite(SpriteSheet, "normal");
+        this.animation = new createjs.Sprite(spriteSheet, "normal");
     else
-        this.animation = new createjs.Sprite(SpriteSheet, "malade");
+        this.animation = new createjs.Sprite(spriteSheet, "malade");
 
 
 }
