@@ -26,16 +26,24 @@ var ClickClown = function(){
         var vitessey= 3;
         var spriteclownNoir = new SpriteClown("noir");
         var clownNoir = spriteclownNoir.animation;
-        clownNoir.x = 100;
-        clownNoir.y = 100;
+        clownNoir.x = 0;
+        clownNoir.y = 0;
+
+        clownNoir.scaleX = clownNoir.scaleY = stage.width /2000;
         stage.addChild(clownNoir);
 
         var spriteclownNormal = new SpriteClown("normal");
         var clownNormal = spriteclownNormal.animation;
+        clownNormal.x = 300;
+        clownNormal.y = 0;
+        clownNormal.scaleX = clownNoir.scaleY = stage.width /2000;
         stage.addChild(clownNormal);
 
         var spriteclownMalade = new SpriteClown("Malade");
         var clownMalade = spriteclownMalade.animation;
+        clownMalade.x = 600;
+        clownMalade.y = 0;
+        clownMalade.scaleX = clownNoir.scaleY = stage.width /2000;
         stage.addChild(clownMalade);
 
         function enterFrameHandler(event) {
