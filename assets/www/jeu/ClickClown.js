@@ -48,19 +48,19 @@ var ClickClown = function(){
         }
         function afficherClown(clown){
 
-            clown.y = -100;
+            clown.y = 0- (256 * (stage.width / 3 / 256));
             stage.addChild(clown);
         }
 
         function enterFrameHandler(event) {
             compteurFrames ++;
-            if(compteurFrames%50==0){
+            if(compteurFrames%(256*stage.width /3 / 256)==0){
                 var clowntmp = creerClown();
                 afficherClown(clowntmp);
                 lesClowns.push(clowntmp);
             }
             for(i in lesClowns){
-                lesClowns[i].y+=8;
+                lesClowns[i].y+=1;
             }
             stage.update();
             // this will log a steadily increasing value:
