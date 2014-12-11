@@ -1,5 +1,6 @@
 var ClickClown = function(){
     var stage = new createjs.Stage("gameCanvas");
+    var vitesse = 3;
     this.jouer = function(){
         function resize_canvas(){
             content = document.getElementById("content");
@@ -54,13 +55,13 @@ var ClickClown = function(){
 
         function enterFrameHandler(event) {
             compteurFrames ++;
-            if(compteurFrames%(256*stage.width /3 / 256)==0){
+            if(compteurFrames%((256*stage.width /3 / 256)/vitesse)==0){
                 var clowntmp = creerClown();
                 afficherClown(clowntmp);
                 lesClowns.push(clowntmp);
             }
             for(i in lesClowns){
-                lesClowns[i].y+=1;
+                lesClowns[i].y+=vitesse;
             }
             stage.update();
             // this will log a steadily increasing value:
