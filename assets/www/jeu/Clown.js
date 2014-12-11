@@ -1,4 +1,5 @@
 var SpriteClown = function(couleur){
+    var couleur = couleur;
     var data = {
         images: ["img/SpriteSheetClown.png"],
         frames: {width:256, height:256},
@@ -11,6 +12,16 @@ var SpriteClown = function(couleur){
         this.animation = new createjs.Sprite(spriteSheet, "normal");
     else
         this.animation = new createjs.Sprite(spriteSheet, "malade");
+
+    this.animation.addEventListener("click", handleClick);
+    function handleClick(event){
+        if(couleur == "noir")
+            alert("perdu");
+        else if(couleur == "normal")
+            alert("+1 point");
+        else
+            alert("-5 points");
+    }
 
 
 }
