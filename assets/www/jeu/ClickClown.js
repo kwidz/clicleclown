@@ -11,6 +11,7 @@ var ClickClown = function(){
 
         }
         resize_canvas();
+        var lesClowns={};
         var compteurFrames = 0;
         var circle = new createjs.Shape();
         circle.graphics.beginFill("red").drawCircle(0, 0, 50);
@@ -29,28 +30,33 @@ var ClickClown = function(){
             var position1 = 0;
             var position2 = 256 * stage.width /3/ 256;
             var position3 = 512 * stage.width /3/ 256;
-
-            var spriteclownNoir = new SpriteClown("noir");
-            var clownNoir = spriteclownNoir.animation;
-            clownNoir.scaleX = clownNoir.scaleY = stage.width /3/ 256;
-
+            var random = Math.floor(Math.random()*10)+1;
+            if(random == 6) {
+                var clownSprite = new SpriteClown("noir");
+                var clown = spriteclownNoir.animation;
+                clown.scaleX = clown.scaleY = stage.width / 3 / 256;
+            }
 
             //creation d'un clown normal
-            var spriteclownNormal = new SpriteClown("normal");
-            var clownNormal = spriteclownNormal.animation;
-            clownNormal.scaleX = clownNormal.scaleY = stage.width /3/256;
-
+            else if(random == 7 || random == 8) {
+                var clownSprite = new SpriteClown("Malade");
+                var clown = spriteclownMalade.animation;
+                clown.scaleX = clown.scaleY = stage.width /3 / 256;
+            }
+            else{
+                var clownSprite = new SpriteClown("normal");
+                var clown = spriteclownNormal.animation;
+                clown.scaleX = clown.scaleY = stage.width / 3 / 256;
+            }
 
             //creation d'un clown maladde
-            var spriteclownMalade = new SpriteClown("Malade");
-            var clownMalade = spriteclownMalade.animation;
-            clownMalade.scaleX = clownMalade.scaleY = stage.width /3 / 256;
+
 
         }
-        function afficherClown(){
-            clownNoir.x = 0;
-            clownNoir.y = 0;
-            stage.addChild(clownNormal);
+        function afficherClown(clown){
+
+            clown.y = -100;
+            stage.addChild(clown);
         }
 
         function enterFrameHandler(event) {

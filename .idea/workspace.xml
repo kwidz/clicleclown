@@ -80,8 +80,8 @@
       <file leaf-file-name="ClickClown.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/jeu/ClickClown.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60655737" vertical-offset="305" max-vertical-offset="1140">
-              <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.5327869" vertical-offset="410" max-vertical-offset="1230">
+              <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -598,12 +598,12 @@
       <workItem from="1418061647751" duration="7906000" />
       <workItem from="1418162692718" duration="153000" />
       <workItem from="1418162898235" duration="3877000" />
-      <workItem from="1418265278676" duration="2084000" />
+      <workItem from="1418265278676" duration="2450000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14705000" />
+    <option name="totallyTimeSpent" value="15071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1045" extended-state="0" />
@@ -667,7 +667,8 @@
     <MESSAGE value="Le clown est rendu clicable" />
     <MESSAGE value="on effectue une action toute les X frames" />
     <MESSAGE value="Creation des clowns via une fonction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creation des clowns via une fonction" />
+    <MESSAGE value="position des clown" />
+    <option name="LAST_COMMIT_MESSAGE" value="position des clown" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -910,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/jeu/ClickClown.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60655737" vertical-offset="305" max-vertical-offset="1140">
-          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.5327869" vertical-offset="410" max-vertical-offset="1230">
+          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
           <folding />
         </state>
       </provider>
