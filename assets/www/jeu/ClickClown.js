@@ -11,7 +11,7 @@ var ClickClown = function(){
 
         }
         resize_canvas();
-
+        var compteurFrames = 0;
         var circle = new createjs.Shape();
         circle.graphics.beginFill("red").drawCircle(0, 0, 50);
         circle.x = 100;
@@ -47,13 +47,18 @@ var ClickClown = function(){
         clownMalade.scaleX = clownMalade.scaleY = stage.width /3 / 256;
         stage.addChild(clownMalade);
 
+
+
         function enterFrameHandler(event) {
+            compteurFrames ++;
             if(((circle.x +50) >= stage.width) || (circle.x - 50) <= 0)
                 vitessex = -vitessex;
             if(((circle.y +50) >= stage.height) || (circle.y - 50) <= 0)
                 vitessey = -vitessey;
             circle.x += vitessex;
             circle.y += vitessey;
+            if(compteurFrames%2==0)
+                console.log("test");
             stage.update();
             // this will log a steadily increasing value:
         }
