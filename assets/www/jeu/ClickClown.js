@@ -26,32 +26,31 @@ var ClickClown = function(){
         var vitessey= 3;
 
         function creerClown(){
-            //creation d'un clown noir
+            var position1 = 0;
+            var position2 = 256 * stage.width /3/ 256;
+            var position3 = 512 * stage.width /3/ 256;
+
             var spriteclownNoir = new SpriteClown("noir");
             var clownNoir = spriteclownNoir.animation;
-            clownNoir.x = 0;
-            clownNoir.y = 0;
-            clownNoir.scaleX = clownNoir.scaleY = stage.width /4/ 256;
-            stage.addChild(clownNoir);
+            clownNoir.scaleX = clownNoir.scaleY = stage.width /3/ 256;
+
 
             //creation d'un clown normal
             var spriteclownNormal = new SpriteClown("normal");
             var clownNormal = spriteclownNormal.animation;
-            clownNormal.x = 0
-            clownNormal.y = 0;
-            clownNormal.scaleX = clownNormal.scaleY = stage.width /4/256;
-            stage.addChild(clownNormal);
+            clownNormal.scaleX = clownNormal.scaleY = stage.width /3/256;
+
 
             //creation d'un clown maladde
             var spriteclownMalade = new SpriteClown("Malade");
             var clownMalade = spriteclownMalade.animation;
-            clownMalade.x = 0;
-            clownMalade.y = 0;
-            clownMalade.scaleX = clownMalade.scaleY = stage.width /4 / 256;
-            stage.addChild(clownMalade);
+            clownMalade.scaleX = clownMalade.scaleY = stage.width /3 / 256;
+
         }
         function afficherClown(){
-
+            clownNoir.x = 0;
+            clownNoir.y = 0;
+            stage.addChild(clownNormal);
         }
 
         function enterFrameHandler(event) {
