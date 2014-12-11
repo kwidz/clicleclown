@@ -11,7 +11,7 @@ var ClickClown = function(){
 
         }
         resize_canvas();
-        var lesClowns={};
+        var lesClowns=new Array();
         var compteurFrames = 0;
         var circle = new createjs.Shape();
         circle.graphics.beginFill("red").drawCircle(0, 0, 50);
@@ -33,22 +33,22 @@ var ClickClown = function(){
             var random = Math.floor(Math.random()*10)+1;
             if(random == 6) {
                 var clownSprite = new SpriteClown("noir");
-                var clown = spriteclownNoir.animation;
+                var clown = clownSprite.animation;
                 clown.scaleX = clown.scaleY = stage.width / 3 / 256;
             }
 
             //creation d'un clown normal
             else if(random == 7 || random == 8) {
                 var clownSprite = new SpriteClown("Malade");
-                var clown = spriteclownMalade.animation;
+                var clown = clownSprite.animation;
                 clown.scaleX = clown.scaleY = stage.width /3 / 256;
             }
             else{
                 var clownSprite = new SpriteClown("normal");
-                var clown = spriteclownNormal.animation;
+                var clown = clownSprite.animation;
                 clown.scaleX = clown.scaleY = stage.width / 3 / 256;
             }
-
+            return clown;
             //creation d'un clown maladde
 
 
@@ -68,7 +68,12 @@ var ClickClown = function(){
             circle.x += vitessex;
             circle.y += vitessey;
             if(compteurFrames%50==0){
-
+                var clowntmp = creerClown();
+                afficherClown(clowntmp);
+                lesClowns.push(clowntmp);
+            }
+            for(i in lesClowns){
+                lesClowns[i].y--;
             }
             stage.update();
             // this will log a steadily increasing value:
