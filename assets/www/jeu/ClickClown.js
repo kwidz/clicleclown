@@ -73,7 +73,7 @@ var ClickClown = function(){
                 lesClowns.push(clowntmp);
             }
             for(i in lesClowns){
-                lesClowns[i].y--;
+                lesClowns[i].y++;
             }
             stage.update();
             // this will log a steadily increasing value:
