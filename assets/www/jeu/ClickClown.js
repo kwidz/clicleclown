@@ -13,13 +13,6 @@ var ClickClown = function(){
         resize_canvas();
         var lesClowns=new Array();
         var compteurFrames = 0;
-        var circle = new createjs.Shape();
-        circle.graphics.beginFill("red").drawCircle(0, 0, 50);
-        circle.x = 100;
-        circle.y = 100;
-        stage.addChild(circle);
-        //stage.addChild(new createjs.Shape()).setTransform(100,100).graphics.f("red").dc(0,0,50);
-        stage.update();
         createjs.Ticker.addEventListener("tick", enterFrameHandler);
         createjs.Ticker.setInterval(25);
         createjs.Ticker.setFPS(60);
@@ -61,19 +54,13 @@ var ClickClown = function(){
 
         function enterFrameHandler(event) {
             compteurFrames ++;
-            if(((circle.x +50) >= stage.width) || (circle.x - 50) <= 0)
-                vitessex = -vitessex;
-            if(((circle.y +50) >= stage.height) || (circle.y - 50) <= 0)
-                vitessey = -vitessey;
-            circle.x += vitessex;
-            circle.y += vitessey;
             if(compteurFrames%50==0){
                 var clowntmp = creerClown();
                 afficherClown(clowntmp);
                 lesClowns.push(clowntmp);
             }
             for(i in lesClowns){
-                lesClowns[i].y++;
+                lesClowns[i].y+=8;
             }
             stage.update();
             // this will log a steadily increasing value:
