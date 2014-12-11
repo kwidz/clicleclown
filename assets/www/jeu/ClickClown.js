@@ -24,30 +24,35 @@ var ClickClown = function(){
         createjs.Ticker.setFPS(60);
         var vitessex = 3;
         var vitessey= 3;
-        var spriteclownNoir = new SpriteClown("noir");
-        var clownNoir = spriteclownNoir.animation;
-        var tailleClown = 256 * stage.width /3/ 256;
-        clownNoir.x = 0;
-        clownNoir.y = 0;
-        clownNoir.scaleX = clownNoir.scaleY = stage.width /3/ 256;
-        stage.addChild(clownNoir);
 
-        var spriteclownNormal = new SpriteClown("normal");
-        var clownNormal = spriteclownNormal.animation;
+        function creerClown(){
+            //creation d'un clown noir
+            var spriteclownNoir = new SpriteClown("noir");
+            var clownNoir = spriteclownNoir.animation;
+            clownNoir.x = 0;
+            clownNoir.y = 0;
+            clownNoir.scaleX = clownNoir.scaleY = stage.width /4/ 256;
+            stage.addChild(clownNoir);
 
-        clownNormal.x = clownNoir.x + tailleClown;
-        clownNormal.y = 0;
-        clownNormal.scaleX = clownNormal.scaleY = stage.width /3/256;
-        stage.addChild(clownNormal);
+            //creation d'un clown normal
+            var spriteclownNormal = new SpriteClown("normal");
+            var clownNormal = spriteclownNormal.animation;
+            clownNormal.x = 0
+            clownNormal.y = 0;
+            clownNormal.scaleX = clownNormal.scaleY = stage.width /4/256;
+            stage.addChild(clownNormal);
 
-        var spriteclownMalade = new SpriteClown("Malade");
-        var clownMalade = spriteclownMalade.animation;
-        clownMalade.x = clownNormal.x+tailleClown;
-        clownMalade.y = 0;
-        clownMalade.scaleX = clownMalade.scaleY = stage.width /3 / 256;
-        stage.addChild(clownMalade);
+            //creation d'un clown maladde
+            var spriteclownMalade = new SpriteClown("Malade");
+            var clownMalade = spriteclownMalade.animation;
+            clownMalade.x = 0;
+            clownMalade.y = 0;
+            clownMalade.scaleX = clownMalade.scaleY = stage.width /4 / 256;
+            stage.addChild(clownMalade);
+        }
+        function afficherClown(){
 
-
+        }
 
         function enterFrameHandler(event) {
             compteurFrames ++;
@@ -57,8 +62,9 @@ var ClickClown = function(){
                 vitessey = -vitessey;
             circle.x += vitessex;
             circle.y += vitessey;
-            if(compteurFrames%2==0)
-                console.log("test");
+            if(compteurFrames%50==0){
+
+            }
             stage.update();
             // this will log a steadily increasing value:
         }
