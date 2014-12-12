@@ -19,10 +19,11 @@ var ClickClown = function(){
         createjs.Ticker.setFPS(60);
         var vitessex = 3;
         var vitessey= 3;
-        var clownASupprimer = "";
+        var clownASupprimer = "h";
         function supprimerUnClown(unClown){
             stage.removeChild(unClown.animation);
             clownASupprimer = lesClowns.indexOf(unClown);
+            console.log(clownASupprimer+"#######");
 
         }
         function creerClown(){
@@ -79,30 +80,32 @@ var ClickClown = function(){
                 lesClowns.push(clowntmp);
 
             }
-            var index = "";
+            var index = "h";
             for(i in lesClowns){
 
                 lesClowns[i].animation.y+=vitesse;
                 if ((lesClowns[i].animation.y > stage.height)){
                     if(lesClowns[i].couleur=="normal"){
-                        //alert("perdu");
-                        //console.log("perdu");
+                        alert("perdu");
+                        console.log("perdu");
                     }
-                    stage.removeChild(lesClowns[i]);
                     lesClowns[i].detruire();
+                    stage.removeChild(lesClowns[i]);
                     index = i;
-
                 }
-
             }
-            if(index!=""){
+            if(index!="h"){
+                console.log(index);
                 lesClowns.splice(index,1);
-                index = "";
+                index = "h";
             }
-            if(clownASupprimer!=""){
-                //alert(clownASupprimer);
+
+            if(clownASupprimer!="h"){
+                console.log(clownASupprimer);
+
                 lesClowns.splice(clownASupprimer,1);
-                clownASupprimer="";
+                clownASupprimer="h";
+               // alert("supprimé");
             }
             stage.update();
             // this will log a steadily increasing value:

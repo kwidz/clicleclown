@@ -26,10 +26,13 @@ SpriteClown = function(couleur, supprimer){
         else if (couleur == "normal") {
             self.detruire();
             self.supprimer(self);
-            console.log("test");
+            console.log("+1");
+
         }
         else
             self.detruire();
+            self.supprimer(self);
+            console.log("-5");
     }
 
     this.detruire = function(){
