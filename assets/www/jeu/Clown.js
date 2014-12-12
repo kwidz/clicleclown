@@ -1,4 +1,5 @@
-SpriteClown = function(couleur){
+SpriteClown = function(couleur, supprimer){
+    this.supprimer = supprimer;
     this.couleur = couleur;
     this.data = {
         images: ["img/SpriteSheetClown.png"],
@@ -16,16 +17,25 @@ SpriteClown = function(couleur){
         this.animation = new createjs.Sprite(this.spriteSheet, "malade");
 
     this.animation.addEventListener("click", handleClick);
+    var self = this;
 
-    function handleClick(event){
+    function handleClick(event) {
 
-        if(couleur == "noir")
+        if (couleur == "noir")
             alert("perdu");
-        else if(couleur == "normal")
-            alert("+1 point");
+        else if (couleur == "normal") {
+            self.detruire();
+            self.supprimer(self);
+            console.log("test");
+        }
         else
-            alert("-5 points");
+            self.detruire();
     }
+
+    this.detruire = function(){
+        this.animation.removeAllEventListeners();
+    }
+
 
 
 

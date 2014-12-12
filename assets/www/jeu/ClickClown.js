@@ -19,7 +19,12 @@ var ClickClown = function(){
         createjs.Ticker.setFPS(60);
         var vitessex = 3;
         var vitessey= 3;
+        var clownASupprimer = "";
+        function supprimerUnClown(unClown){
+            stage.removeChild(unClown.animation);
+            clownASupprimer = lesClowns.indexOf(unClown);
 
+        }
         function creerClown(){
 
             var position1 = 0;
@@ -27,19 +32,19 @@ var ClickClown = function(){
             var position3 = 512 * stage.width /3/ 256;
             var random = Math.floor(Math.random()*10)+1;
             if(random == 6) {
-                var clownSprite = new SpriteClown("noir");
+                var clownSprite = new SpriteClown("noir",supprimerUnClown);
                 var clown = clownSprite.animation;
                 clown.scaleX = clown.scaleY = stage.width / 3 / 256;
             }
 
             //creation d'un clown normal
             else if(random == 7 || random == 8) {
-                var clownSprite = new SpriteClown("Malade");
+                var clownSprite = new SpriteClown("Malade", supprimerUnClown);
                 var clown = clownSprite.animation;
                 clown.scaleX = clown.scaleY = stage.width /3 / 256;
             }
             else{
-                var clownSprite = new SpriteClown("normal");
+                var clownSprite = new SpriteClown("normal",supprimerUnClown);
                 var clown = clownSprite.animation;
                 clown.scaleX = clown.scaleY = stage.width / 3 / 256;
             }
@@ -74,15 +79,35 @@ var ClickClown = function(){
                 lesClowns.push(clowntmp);
 
             }
+            var index = "";
             for(i in lesClowns){
 
                 lesClowns[i].animation.y+=vitesse;
-                if ((lesClowns[i].animation.y > stage.height)&&(lesClowns[i].couleur=="normal")){
-                    alert("");
+                if ((lesClowns[i].animation.y > stage.height)){
+                    if(lesClowns[i].couleur=="normal"){
+                        //alert("perdu");
+                        //console.log("perdu");
+                    }
+                    stage.removeChild(lesClowns[i]);
+                    lesClowns[i].detruire();
+                    index = i;
+
                 }
+
+            }
+            if(index!=""){
+                lesClowns.splice(index,1);
+                index = "";
+            }
+            if(clownASupprimer!=""){
+                //alert(clownASupprimer);
+                lesClowns.splice(clownASupprimer,1);
+                clownASupprimer="";
             }
             stage.update();
             // this will log a steadily increasing value:
         }
+
+
     }
 };
