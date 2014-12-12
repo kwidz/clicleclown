@@ -21,6 +21,7 @@ var ClickClown = function(){
         var vitessey= 3;
 
         function creerClown(){
+
             var position1 = 0;
             var position2 = 256 * stage.width /3/ 256;
             var position3 = 512 * stage.width /3/ 256;
@@ -42,26 +43,43 @@ var ClickClown = function(){
                 var clown = clownSprite.animation;
                 clown.scaleX = clown.scaleY = stage.width / 3 / 256;
             }
-            return clown;
             //creation d'un clown maladde
+            var random2 = Math.floor(Math.random()*3)+1;
+            if(random2==1){
+                clown.x=position1;
+            }
+            else if(random2==2){
+                clown.x=position2;
+            }
+            else
+                clown.x=position3;
+            return clownSprite;
 
 
         }
         function afficherClown(clown){
 
             clown.y = 0- (256 * (stage.width / 3 / 256));
+
             stage.addChild(clown);
         }
 
         function enterFrameHandler(event) {
             compteurFrames ++;
-            if(compteurFrames%((256*stage.width /3 / 256)/vitesse)==0){
+            //alert(Math.round((256*stage.width /3 / 256)/vitesse)) ;
+            if(compteurFrames%(Math.round((256*stage.width /3 / 256)/vitesse))==0){
+
                 var clowntmp = creerClown();
-                afficherClown(clowntmp);
+                afficherClown(clowntmp.animation);
                 lesClowns.push(clowntmp);
+
             }
             for(i in lesClowns){
-                lesClowns[i].y+=vitesse;
+
+                lesClowns[i].animation.y+=vitesse;
+                if ((lesClowns[i].animation.y > stage.height)&&(lesClowns[i].couleur=="normal")){
+                    alert("");
+                }
             }
             stage.update();
             // this will log a steadily increasing value:
