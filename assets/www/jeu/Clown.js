@@ -1,4 +1,4 @@
-SpriteClown = function(couleur, supprimer){
+SpriteClown = function(couleur, supprimer, perdre){
     this.supprimer = supprimer;
     this.couleur = couleur;
     this.data = {
@@ -22,7 +22,7 @@ SpriteClown = function(couleur, supprimer){
     function handleClick(event) {
 
         if (couleur == "noir")
-            alert("perdu");
+            perdre();
         else if (couleur == "normal") {
             self.detruire();
             self.supprimer(self);

@@ -33,6 +33,9 @@ var ClickClown = function(){
             console.log("#########################"+score+"######################");
 
         }
+        function perdre(){
+            alert("Perdu !\n"+"Score : "+score);
+        }
         function creerClown(){
 
             var position1 = 0;
@@ -40,19 +43,19 @@ var ClickClown = function(){
             var position3 = 512 * stage.width /3/ 256;
             var random = Math.floor(Math.random()*10)+1;
             if(random == 6) {
-                var clownSprite = new SpriteClown("noir",supprimerUnClown);
+                var clownSprite = new SpriteClown("noir",supprimerUnClown, perdre);
                 var clown = clownSprite.animation;
                 clown.scaleX = clown.scaleY = stage.width / 3 / 256;
             }
 
             //creation d'un clown normal
             else if(random == 7 || random == 8) {
-                var clownSprite = new SpriteClown("Malade", supprimerUnClown);
+                var clownSprite = new SpriteClown("Malade", supprimerUnClown, perdre);
                 var clown = clownSprite.animation;
                 clown.scaleX = clown.scaleY = stage.width /3 / 256;
             }
             else{
-                var clownSprite = new SpriteClown("normal",supprimerUnClown);
+                var clownSprite = new SpriteClown("normal",supprimerUnClown, perdre);
                 var clown = clownSprite.animation;
                 clown.scaleX = clown.scaleY = stage.width / 3 / 256;
             }
@@ -96,7 +99,7 @@ var ClickClown = function(){
                 lesClowns[i].animation.y+=vitesse;
                 if ((lesClowns[i].animation.y > stage.height)){
                     if(lesClowns[i].couleur=="normal"){
-                        alert("Perdu !\n"+"Score : "+score);
+                        perdre();
 
                     }
                     lesClowns[i].detruire();
