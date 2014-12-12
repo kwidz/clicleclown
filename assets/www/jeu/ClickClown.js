@@ -1,6 +1,7 @@
 var ClickClown = function(){
     var stage = new createjs.Stage("gameCanvas");
     var vitesse = 3;
+    var score = 0;
     this.jouer = function(){
         function resize_canvas(){
             content = document.getElementById("content");
@@ -22,8 +23,14 @@ var ClickClown = function(){
         var clownASupprimer = "h";
         function supprimerUnClown(unClown){
             stage.removeChild(unClown.animation);
+            if(unClown.couleur=="Malade"){
+                score-=5;
+            }
+            else if(unClown.couleur=="normal"){
+                score +=1;
+            }
             clownASupprimer = lesClowns.indexOf(unClown);
-            console.log(clownASupprimer+"#######");
+            console.log("#########################"+score+"######################");
 
         }
         function creerClown(){
@@ -73,6 +80,9 @@ var ClickClown = function(){
         function enterFrameHandler(event) {
             compteurFrames ++;
             //alert(Math.round((256*stage.width /3 / 256)/vitesse)) ;
+            if(compteurFrames%1000==0){
+                vitesse++;
+            }
             if(compteurFrames%(Math.round((256*stage.width /3 / 256)/vitesse))==0){
 
                 var clowntmp = creerClown();
@@ -86,8 +96,8 @@ var ClickClown = function(){
                 lesClowns[i].animation.y+=vitesse;
                 if ((lesClowns[i].animation.y > stage.height)){
                     if(lesClowns[i].couleur=="normal"){
-                        alert("perdu");
-                        console.log("perdu");
+                        alert("Perdu !\n"+"Score : "+score);
+
                     }
                     lesClowns[i].detruire();
                     stage.removeChild(lesClowns[i]);
@@ -95,13 +105,13 @@ var ClickClown = function(){
                 }
             }
             if(index!="h"){
-                console.log(index);
+
                 lesClowns.splice(index,1);
                 index = "h";
             }
 
             if(clownASupprimer!="h"){
-                console.log(clownASupprimer);
+
 
                 lesClowns.splice(clownASupprimer,1);
                 clownASupprimer="h";
