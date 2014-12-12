@@ -17,7 +17,7 @@ var ClickClown = function(){
         var compteurFrames = 0;
         createjs.Ticker.addEventListener("tick", enterFrameHandler);
         createjs.Ticker.setInterval(25);
-        createjs.Ticker.setFPS(60);
+        createjs.Ticker.setFPS(40);
         var vitessex = 3;
         var vitessey= 3;
         var clownASupprimer = "h";
@@ -109,14 +109,16 @@ var ClickClown = function(){
             }
             if(index!="h"){
 
-                lesClowns.splice(index,1);
+                var tmp = lesClowns.splice(index,1);
+                delete tmp;
                 index = "h";
             }
 
             if(clownASupprimer!="h"){
 
 
-                lesClowns.splice(clownASupprimer,1);
+                var tmp = lesClowns.splice(clownASupprimer,1);
+                delete tmp;
                 clownASupprimer="h";
                // alert("supprimé");
             }
