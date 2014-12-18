@@ -16,6 +16,7 @@ var accueilhtml = $("#page-accueil").html();
 $("body").html($("#page-accueil").html());
 
 
+
 var Acceuil = {
 
 	lancer:function()

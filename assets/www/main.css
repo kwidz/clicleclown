@@ -415,9 +415,34 @@ text-transform: lowercase;
 
 }
 
-div {
+div, p {
 
   font-family: VT323;
 }
+
+
+#formulaire {
+
+color : #bd5248;
+font-size: 40px;
+font-weight: 700;
+display: block;
+text-align: center;
+font-family: VT323;
+
+}
+
+ul, li {
+
+color : #bd5248;
+font-size: 40px;
+font-weight: 700;
+display: block;
+text-align: center;
+font-family: VT323;
+
+}
+
+
 
 

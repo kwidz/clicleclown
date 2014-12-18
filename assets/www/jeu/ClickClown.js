@@ -1,3 +1,5 @@
+var jeuPerduhtml = $("#page-game-over").html();
+
 var ClickClown = function(){
     var stage = new createjs.Stage("gameCanvas");
     var vitesse = 3;
@@ -35,6 +37,7 @@ var ClickClown = function(){
         }
         function perdre(){
             alert("Perdu !\n"+"Score : "+score);
+			$("body").html(jeuPerduhtml);
         }
         function creerClown(){
 
