@@ -2,7 +2,7 @@ var jeuPerduhtml = $("#page-game-over").html();
 
 var ClickClown = function(){
     var stage = new createjs.Stage("gameCanvas");
-    var vitesse = 3;
+    var vitesse = 5;
     var score = 0;
     this.jouer = function(){
         function resize_canvas(){
@@ -36,7 +36,8 @@ var ClickClown = function(){
 
         }
         function perdre(){
-            alert("Perdu !\n"+"Score : "+score);
+            createjs.Ticker.removeAllEventListeners();
+            window.location.hash='#defaite';
 			$("body").html(jeuPerduhtml);
         }
         function creerClown(){

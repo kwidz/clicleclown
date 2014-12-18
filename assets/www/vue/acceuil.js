@@ -12,12 +12,14 @@ var scorehtml = $("#page-scores").html();
 var jeuhtml = $("#page-jeu").html();
 var tutorielhtml = $("#page-tutoriel").html();
 var accueilhtml = $("#page-accueil").html();
-
+var jeu=new ClickClown();
 $("body").html($("#page-accueil").html());
 
 
 
 var Acceuil = {
+
+
 
 	lancer:function()
 	{			
@@ -41,8 +43,9 @@ var Acceuil = {
 		else if(ancre.match(/^#nouveau-jeu/))
 		{	
 			//alert('nouveau jeu')
+            delete jeu;
 			$("body").html(jeuhtml);
-			var jeu = new ClickClown();
+			jeu = new ClickClown();
 			jeu.jouer();
 		}
 		else if (ancre.match(/^#scores/))
