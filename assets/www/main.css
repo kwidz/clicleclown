@@ -1,0 +1,423 @@
+/* line 2, 1-tools/_normalize.scss */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+a {
+  background: 0 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+b, strong {
+  font-weight: 700;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+button, select {
+  text-transform: none;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+optgroup {
+  font-weight: 700;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 2, 1-tools/_normalize.scss */
+td, th {
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(//themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
+}
+
+/* line 3, 2-base/_base.sass */
+.gigantic, .huge, .large, .bigger, .big,
+h1, h2, h3, h4, h5, h6 {
+  color: #bd5248;
+  font-weight: bold;
+}
+
+/* line 8, 2-base/_base.sass */
+.gigantic {
+  font-size: 110px;
+  line-height: 1.09;
+  letter-spacing: -2px;
+}
+
+/* line 13, 2-base/_base.sass */
+.huge, h1 {
+  font-size: 68px;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+/* line 18, 2-base/_base.sass */
+.large, h2 {
+  font-size: 42px;
+  line-height: 1.14;
+}
+
+/* line 22, 2-base/_base.sass */
+.bigger, h3 {
+  font-size: 26px;
+  line-height: 1.38;
+}
+
+/* line 26, 2-base/_base.sass */
+.big, h4 {
+  font-size: 22px;
+  line-height: 1.38;
+}
+
+/* line 30, 2-base/_base.sass */
+.small, small {
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+/* line 36, 2-base/_base.sass */
+p {
+  margin: 0 0 20px 0;
+}
+
+/* line 39, 2-base/_base.sass */
+em {
+  font-style: italic;
+}
+
+/* line 42, 2-base/_base.sass */
+strong {
+  font-weight: bold;
+}
+
+/* line 45, 2-base/_base.sass */
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0;
+}
+
+/* line 56, 2-base/_base.sass */
+a {
+  color: #bd5248;
+  text-decoration: none;
+  outline: 0;
+}
+
+/* line 61, 2-base/_base.sass */
+a:hover, a:focus {
+  color: #d89993;
+}
+
+/* line 68, 2-base/_base.sass */
+::selection {
+  background: #fff498;
+}
+
+/* line 71, 2-base/_base.sass */
+::-moz-selection {
+  background: #fff498;
+}
+
+/* line 74, 2-base/_base.sass */
+img::selection {
+  background: transparent;
+}
+
+/* line 77, 2-base/_base.sass */
+img::-moz-selection {
+  background: transparent;
+}
+
+/* line 80, 2-base/_base.sass */
+body {
+  -webkit-tap-highlight-color: #fff498;
+}
+
+/* line 87, 2-base/_base.sass */
+body {
+  background: #f6f6f8;
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: "Open Sans" sans-serif;
+  color: #2e2d33;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 2, 4-pages/_-menu.sass */
+body {
+  background: #fbffe5;
+}
+/* line 5, 4-pages/_-menu.sass */
+body a {
+  color: red;
+  font-size: 40px;
+  font-weight: 700;
+  hover-color: orange;
+  float: center;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  margin-top: 15px;
+  font-family: VT323;
+  span-display: inline-block;
+  span-border: green solid 2px;
+  span-padding: 0.2em 0.5em;
+}
+/* line 26, 4-pages/_-menu.sass */
+body .image-clown {
+  height: 300px;
+  width: 400px;
+  background: url("img/Clown-icon.png");
+  background-size: cover;
+  margin-bottom: 0px;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+}
+
+#tuto {
+
+color : #bd5248;
+font-size: 40px;
+font-weight: 700;
+display: block;
+text-align: center;
+
+}
+
+#affichage-score {
+
+color : #bd5248;
+font-size: 40px;
+font-weight: 700;
+display: block;
+text-align: center;
+
+}
+
+#retour {
+
+position : relative;
+height: 100px;
+width: 200px;
+color : #bd5248;
+background : #fbffe5;
+font-size: 40px;
+font-weight: 700;
+margin-left : auto;
+margin-right : auto;
+text-transform: lowercase;
+
+}
+
+div {
+
+  font-family: VT323;
+}
+
+
