@@ -53,7 +53,7 @@ var Acceuil = {
             $("body").html(jeuPerduhtml);
             var trouvailles = ancre.match(/^#defaite\/(-*[0-9]+)/);
             var score = trouvailles[1];
-            $("#affichage-score").html("Votre score : "+score);
+            $("#affichage-score").html("GAME OVER<br/>Votre score : "+score);
             $("#soummettre").click(function(){
                 if($("#nom").val()!='') {
                     var nom = $("#nom").val();
