@@ -37,8 +37,8 @@ var ClickClown = function(){
         }
         function perdre(){
             createjs.Ticker.removeAllEventListeners();
-            window.location.hash='#defaite';
-			$("body").html(jeuPerduhtml);
+            window.location.hash='#defaite/'+score;
+
         }
         function creerClown(){
 

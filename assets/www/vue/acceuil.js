@@ -1,12 +1,3 @@
-/*$("body").html($("#page-jeu").html());
-var jeu = new ClickClown();
-jeu.jouer();
-$("body").html($("#page-accueil").html());
-$('a').click( function() { 
-//LANCER JEU
-return false; } );
-$("body").html($("#page-accueil").html());
-*/
 
 var scorehtml = $("#page-scores").html();
 var jeuhtml = $("#page-jeu").html();
@@ -36,9 +27,9 @@ var Acceuil = {
 		//alert("naviguer selon " + window.location.hash);
 		var ancre = window.location.hash;
 		
-		if(!ancre) // 
+		if(!ancre || ancre.match(/^#acceuil/)) //
 		{	
-			//$("body").html(accueilhtml);
+			$("body").html(accueilhtml);
 		}
 		else if(ancre.match(/^#nouveau-jeu/))
 		{	
@@ -56,6 +47,19 @@ var Acceuil = {
 		{
 			$("body").html(tutorielhtml);
 		}
+        else{
+            $("body").html(jeuPerduhtml);
+            $("#soummettre").click(function(){
+                var nom = $("#nom").val();
+                var trouvailles = ancre.match(/^#defaite\/(-*[0-9]+)/);
+                var score = trouvailles[1];
+                var pointage = new Score(nom,score);
+                var dao = new ScoreDAO();
+                dao.ajouterScore(pointage);
+                $("body").html(jeuPerduhtml2);
+            });
+
+        }
 	}
 };
 
