@@ -5,14 +5,14 @@ var ScoreDAO = function()
 
     this.initialiser = function()
     {
-        var SQL_CREATION = "CREATE TABLE IF NOT EXISTS score(id INTEGER PRIMARY KEY AUTOINCREMENT, nom VARCHAR(50), score INTEGER)";
+        var SQL_CREATION = "CREATE TABLE IF NOT EXISTS score(id INTEGER PRIMARY KEY AUTOINCREMENT, nom VARCHAR(50), pointage INTEGER)";
         this.baseDeDonnees = window.openDatabase("ListeScore", "1.0", "Liste d scores", 200000);
 
         this.baseDeDonnees.transaction(
             function(operation)
             {
 
-                var SQL_CREATION = "CREATE TABLE IF NOT EXISTS score(id INTEGER PRIMARY KEY AUTOINCREMENT, nom VARCHAR(50), score INTEGER)";
+                var SQL_CREATION = "CREATE TABLE IF NOT EXISTS score(id INTEGER PRIMARY KEY AUTOINCREMENT, nom VARCHAR(50), pointage INTEGER)";
                 operation.executeSql(SQL_CREATION);
             },
             this.reagirErreur,
@@ -40,7 +40,7 @@ var ScoreDAO = function()
         this.baseDeDonnees.transaction(
             function(operation)
             {
-                var SQL_AJOUT = "INSERT INTO score(nom, score) VALUES(?,?)";
+                var SQL_AJOUT = "INSERT INTO score(nom, pointage) VALUES(?,?)";
                 var parametres = [score.nom, score.pointage];
                 operation.executeSql(SQL_AJOUT, parametres);
             },
@@ -58,14 +58,14 @@ var ScoreDAO = function()
             // operation
             function(operation)
             {
-                var SQL_SELECTION = "SELECT * FROM score order by score";
+                var SQL_SELECTION = "SELECT * FROM score order by pointage desc";
                 operation.executeSql(SQL_SELECTION, [], function(operation, resultat)
                 {
                     self.liste_score = [];
                     for(var position=0; position<resultat.rows.length; position++)
                     {
-                        var pointage = resultat.rows.item(position);
-                        self.liste_score[self.liste_score.length] = {"nom":score.nom,"score":pointage.score};
+                        var score = resultat.rows.item(position);
+                        self.liste_score[self.liste_score.length] = {"nom":score.nom,"score":score.pointage};
                     }
                 });
             },

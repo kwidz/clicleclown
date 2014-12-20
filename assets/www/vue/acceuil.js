@@ -44,6 +44,8 @@ var Acceuil = {
 		else if (ancre.match(/^#scores/))
 		{
 			$("body").html(scorehtml);
+            dao = new ScoreDAO();
+            dao.listerScore(ListeScoreVue);
 		}
 		else if (ancre.match(/^#tutoriel/))
 		{
